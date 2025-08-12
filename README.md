@@ -18,7 +18,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 | client_secret  | string                 | Sim         | Client Secret correspondente                             |
 | account_email  | string (email)         | Sim         | E-mail da conta vinculada                                |
 | amount         | number (float)         | Sim         | Valor da transação                                       |
-| method         | string (enum)          | Sim         | Método de pagamento (`mbway`, `multibanco`, `myxspend`)|
+| method         | string (enum)          | Sim         | Método de pagamento (`myxspend`)|
 | payer          | object                 | Sim         | Dados do pagador                                        |
 | &nbsp;&nbsp;name     | string                 | Sim         | Nome do pagador                                         |
 | &nbsp;&nbsp;document | string                 | Sim         | Documento de identificação (NIF, CPF, etc.)             |
@@ -38,20 +38,20 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 
 ```json
 {
-  "id": "string",
-  "status": "PENDING",
-  "amount": 100.5,
-  "createdAt": 1712861010,
-  "split": {},
-  "payer": {},
-  "account_email": "email@example.com",
-  "phone": "+351912345678",
-  "type": "deposit",
-  "description": "Depósito via MB WAY",
-  "updatedAt": 1712861310,
-  "walletType": "REVOLUT",
-  "gateway_id": "gw_987654",
-  "gateway_type": "SIBS"
+  "statusCode": 200,
+  "message": "Payment created successfully",
+  "transactionID": "data.customerOrderId",
+  "id": "data.customerOrderId",
+  "createdAt": 1688985600000,
+  "paymentLink": "data.PaymentLink",
+  "amount": 100.50,
+  "value": 100.50,
+  "paymentLinkCode": "data.PaymentLinkCode",
+  "country": "data.country",
+  "currency": "data.currency",
+  "responseCode": "data.responseCode",
+  "responseMessage": "data.responseMessage",
+  "createdOn": "data.CreatedOn"
 }
 ```
 

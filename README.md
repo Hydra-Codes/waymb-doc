@@ -18,7 +18,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 | client_secret  | string                 | Sim         | Client Secret correspondente                             |
 | account_email  | string (email)         | Sim         | E-mail da conta vinculada                                |
 | amount         | number (float)         | Sim         | Valor da transação                                       |
-| method         | string (enum)          | Sim         | Método de pagamento (`myxspend`)|
+| method         | string (enum)          | Sim         | Método de pagamento (`card`, `banking`)|
 | payer          | object                 | Sim         | Dados do pagador                                        |
 | &nbsp;&nbsp;name     | string                 | Sim         | Nome do pagador                                         |
 | &nbsp;&nbsp;document | string                 | Sim         | Documento de identificação (NIF, CPF, etc.)             |

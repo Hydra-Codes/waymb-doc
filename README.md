@@ -14,11 +14,11 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 
 | Campo          | Tipo                   | Obrigatório | Descrição                                               |
 |----------------|------------------------|-------------|---------------------------------------------------------|
-| client_id      | string                 | Sim         | Client ID da API (globalAPI ou sibsAPI do usuário)      |
+| client_id      | string                 | Sim         | Client ID da API (apiToken do usuário)      |
 | client_secret  | string                 | Sim         | Client Secret correspondente                             |
 | account_email  | string (email)         | Sim         | E-mail da conta vinculada                                |
 | amount         | number (float)         | Sim         | Valor da transação                                       |
-| method         | string (enum)          | Sim         | Método de pagamento (`mbway`, `multibanco`, `card`, `banking`)|
+| method         | string (enum)          | Sim         | Método de pagamento (`mbway`, `multibanco`)|
 | payer          | object                 | Sim         | Dados do pagador                                        |
 | &nbsp;&nbsp;name     | string                 | Sim         | Nome do pagador                                         |
 | &nbsp;&nbsp;document | string                 | Sim         | Documento de identificação (NIF, CPF, etc.)             |

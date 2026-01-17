@@ -32,7 +32,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 | success_url    | string (URI)           | Não         | URL de redirecionamento após sucesso                    |
 | failed_url     | string (URI)           | Não         | URL de redirecionamento após falha                       |
 
-#### Respostas:
+#### Respostas
 
 - **200 OK**: Transação criada com sucesso.
 
@@ -40,20 +40,29 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 {
   "statusCode": 200,
   "message": "Payment created successfully",
-  "transactionID": "data.customerOrderId",
-  "id": "data.customerOrderId",
-  "createdAt": 1688985600000,
-  "paymentLink": "data.PaymentLink",
+  "transactionID": "transactionID",
+  "id": "transactionID",
   "amount": 100.50,
   "value": 100.50,
-  "paymentLinkCode": "data.PaymentLinkCode",
-  "country": "data.country",
-  "currency": "data.currency",
-  "responseCode": "data.responseCode",
-  "responseMessage": "data.responseMessage",
-  "createdOn": "data.CreatedOn"
+  "method": "mbway",
+  "callbackUrl": "https://example.com/callback",
+  "signature": "transactionSignature",
+  "createdAt": 1688985600000,
+  "referenceData": {
+    "entity": "12345",
+    "reference": "123 456 789",
+    "expiresAt": "2025-01-31"
+  },
+  "generatedMBWay": true
 }
 ```
+
+> **Notas:**
+> - `referenceData` é retornado **apenas quando aplicável** (ex: Multibanco)
+> - `generatedMBWay` é retornado **somente quando o método for `mbway`**
+> - `amount` e `value` possuem sempre o mesmo valor
+> - `transactionID` e `id` representam o mesmo identificador da transação
+
 
 ### POST `/transactions/info`
 

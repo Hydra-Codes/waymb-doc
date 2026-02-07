@@ -107,12 +107,12 @@ Notificação enviada para o `callbackUrl` configurado, sempre que há uma atual
   "currency": "EUR",
   "status": "COMPLETED",
   "updatedAt": 1712861310,
-  email: transaction.account_email,
-  account_email: transaction.account_email,
-  payer: {
-     email: transaction.payer.email,
-     name: transaction.payer.name,
-     document: transaction.payer.document,
+  "email": "transaction.account_email",
+  "account_email": "transaction.account_email",
+  "payer": {
+     "email": "transaction.payer.email",
+     "name": "transaction.payer.name",
+     "document": "transaction.payer.document",
   }
 }
 ```

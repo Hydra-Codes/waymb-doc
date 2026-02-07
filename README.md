@@ -20,6 +20,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 | amount         | number (float)         | Sim         | Valor da transação                                       |
 | method         | string (enum)          | Sim         | Método de pagamento (`mbway`, `multibanco`)|
 | payer          | object                 | Sim         | Dados do pagador                                        |
+| &nbsp;&nbsp;email     | string                 | Sim         | E-mail do pagador (obrigatório para donates)                                         |
 | &nbsp;&nbsp;name     | string                 | Sim         | Nome do pagador                                         |
 | &nbsp;&nbsp;document | string                 | Sim         | Documento de identificação (NIF, CPF, etc.)             |
 | &nbsp;&nbsp;phone    | string                 | Sim         | Telefone do pagador                                     |
@@ -105,6 +106,13 @@ Notificação enviada para o `callbackUrl` configurado, sempre que há uma atual
   "value": 100.50,
   "currency": "EUR",
   "status": "COMPLETED",
-  "updatedAt": 1712861310
+  "updatedAt": 1712861310,
+  email: transaction.account_email,
+  account_email: transaction.account_email,
+  payer: {
+     email: transaction.payer.email,
+     name: transaction.payer.name,
+     document: transaction.payer.document,
+  }
 }
 ```

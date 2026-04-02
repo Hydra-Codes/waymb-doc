@@ -120,3 +120,5 @@ Notificação enviada para o `callbackUrl` configurado sempre que há uma atuali
   }
 }
 ```
+
+> **Nota:** Deve-se retornar sempre status 200 para confirmar que a notificação chegou ao destino corretamente.

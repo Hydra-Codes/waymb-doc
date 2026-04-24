@@ -15,7 +15,7 @@ function createTransaction(): array {
             'phone'    => '+351912345678',
         ],
         'currency'     => 'EUR',
-        'paymentDescription' => 'Pagamento para X',
+        'paymentDescription' => 'Pagamento para X', // Limitado a 50 caracteres
         'split'        => [
             'active'     => true,
             'percentage' => 10,

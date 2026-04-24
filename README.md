@@ -61,6 +61,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 > - `generatedMBWay` é retornado **somente quando o método for `mbway`**
 > - `amount` e `value` possuem sempre o mesmo valor
 > - `transactionID` e `id` representam o mesmo identificador da transação
+> - `paymentDescription` é limitado a 50 caracteres
 
 ---
 

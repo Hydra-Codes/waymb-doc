@@ -17,6 +17,7 @@ const createTransaction = async () => {
         phone: "+351912345678",
       },
       currency: "EUR",
+      paymentDescription: "Pagamento para X",
       split: {
         active: true,
         percentage: 10,

@@ -24,6 +24,7 @@ Cria uma nova transação de depósito utilizando um dos métodos de pagamento d
 | `payer.name` | `string` | Sim | Nome do pagador |
 | `payer.document` | `string` | Sim | Documento de identificação (NIF, CPF, etc.) |
 | `payer.phone` | `string` | Sim | Telefone do pagador |
+| `paymentDescription` | `string` | Não | Descrição exibida ao cliente no momento do pagamento (default: `Transaction Payment`) |
 | `currency` | `string` | Não | Moeda da transação (default: `EUR`) |
 | `split` | `object` | Não | Configuração de divisão de pagamento |
 | `split.active` | `boolean` | Não | Indica se divisão está ativa |
